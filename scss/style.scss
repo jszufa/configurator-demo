@@ -1,0 +1,83 @@
+body,
+html {
+    font-family: Arial, sans-serif;
+    background-color: rgb(238 239 242);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    /* Viewport Height */
+    position: relative;
+    padding: 2rem;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+
+        .main-content {
+            position: sticky;
+            top: 0;
+            height: 500px;
+            width: 100%;
+        }
+
+        .sidebar {
+            //width: 300px;
+            /* Or the width you prefer */
+            background-color: #f3f3f3;
+            /* Light gray background */
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            height: 3000px;
+            padding-left: 1rem;
+        }
+    }
+
+}
+
+
+
+.pergola-image {
+    width: 70%;
+    height: auto;
+    /* Keep the aspect ratio */
+    display: block;
+}
+
+
+
+.price-info,
+.options {
+    margin-bottom: 20px;
+}
+
+.color-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    /* Light border for the color option */
+    background-color: #fff;
+}
+
+.color-option span {
+    display: block;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: -1;
+        /* Put the sidebar above the main content */
+    }
+}
