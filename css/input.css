@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  background-color: rgb(238, 239, 242);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* .grid-container {
+  height: 3000px;
+} */
+
+.pergola-image {
+  max-height: 69vh;
+}
+
+.nav-option {
+  @apply p-2 mr-4 hover:bg-neutral-200 rounded-xl cursor-pointer;
+}
+
+/* .container-all {
+  position: relative;
+  padding: 2rem;
+}
+
+.gird-container {
+  display: gird;
+  grid-template-columns: 4fr 1fr;
+  background-color: green;
+}
+
+.main-content {
+  position: sticky;
+  top: 0;
+}
+
+.car-image {
+  width: 100%;
+  height: auto; 
+  display: block;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #f3f3f3; 
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 3000px;
+  padding-left: 1rem;
+}
+
+.price-info, .options {
+  margin-bottom: 20px;
+}
+
+.color-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd; Light border for the color option 
+  background-color: #fff;
+}
+
+.color-option span {
+  display: block;
+} */

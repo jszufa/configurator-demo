@@ -6,15 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Configurator Demo</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/49b7fbbe81.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="container">
-        <div class="grid-container">
-            <main class="main-content">
-                <img src="img/pergola.png" alt="Pergola" class="pergola-image">
+    <div class="container-all">
+        <header class="flex items-center justify-between px-8 mb-8">
+            <i class="fa-solid fa-bars text-2xl p-4 cursor-pointer"></i>
+            <img src="./img/logo.png" alt="Logo" class="p-4">
+            <i class="fa-regular fa-user text-xl p-4 cursor-pointer"></i>
+        </header>
+
+        <div class="grid-container grid grid-cols-12 px-8 gap-8 relative ">
+
+            <main class="relative col-span-8">
+                <h2 class="pl-2 text-3xl font-medium">Pergola ogrodowa</h2>
+                <div class="sticky top-0">
+
+                    <div class="options-navbar ">
+
+                        <div class="flex items-center my-2">
+                            <div class="nav-option">opcja 1</div>
+                            <div class="nav-option">opcja 2</div>
+                            <div class="nav-option">opcja 3</div>
+                            <div class="nav-option">opcja 4</div>
+                            <div class="nav-option">opcja 5</div>
+                            <div class="nav-option">opcja 6</div>
+                            <div class="nav-option">opcja 7</div>
+                            <div class="nav-option">opcja 8</div>
+                        </div>
+                    </div>
+
+                    <div class="visualisation">
+                        <img src="img/pergola.png" alt="Pergola" class="pergola-image rounded-lg w-full">
+                    </div>
+                </div>
             </main>
-            <aside class="sidebar">
+
+
+            <aside class="sidebar mt-24 col-span-4">
+
+                <div id="accordion-colors" data-accordion="open">
+                    <h2 id="accordion-arrow-icon-heading-3">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl mb-4"
+                            data-accordion-target="#accordion-colors-body-3" aria-expanded="false"
+                            aria-controls="accordion-colors-body-3">
+                            <span>Kolory</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-colors-body-3" class="hidden"
+                        aria-labelledby="accordion-arrow-icon-heading-3">
+                        <div class="p-5  bg-white rounded-b-xl">  
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion-option2" data-accordion="open">
+                    <h2 id="accordion-arrow-icon-heading-3">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl"
+                            data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
+                            aria-controls="accordion-arrow-icon-body-3">
+                            <span>Kolory</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-arrow-icon-body-3" class="hidden"
+                        aria-labelledby="accordion-arrow-icon-heading-3">
+                        <div class="p-5  bg-white rounded-b-xl">  
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion-arrow-icon" data-accordion="open">
+                    <h2 id="accordion-arrow-icon-heading-3">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl"
+                            data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
+                            aria-controls="accordion-arrow-icon-body-3">
+                            <span>Kolory</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-arrow-icon-body-3" class="hidden"
+                        aria-labelledby="accordion-arrow-icon-heading-3">
+                        <div class="p-5  bg-white rounded-b-xl">  
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion-arrow-icon" data-accordion="open">
+                    <h2 id="accordion-arrow-icon-heading-3">
+                        <button type="button"
+                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl"
+                            data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
+                            aria-controls="accordion-arrow-icon-body-3">
+                            <span>Kolory</span>
+                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-arrow-icon-body-3" class="hidden"
+                        aria-labelledby="accordion-arrow-icon-heading-3">
+                        <div class="p-5  bg-white rounded-b-xl">  
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="price-info">
                     <p>Cena: 445 000 PLN</p>
                 </div>
@@ -26,7 +146,10 @@
                         </div>
                 </div>
             </aside>
+
         </div>
+
+
         <section class="summary">
             <h2>Podsumowanie</h2>
         </section>
@@ -34,8 +157,9 @@
     </main>
 
     <footer>
-        <!-- Stopka strony -->
+        Footer
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
 </html>
