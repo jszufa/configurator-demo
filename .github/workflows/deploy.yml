@@ -26,9 +26,15 @@ jobs:
         run: |
           mkdir -p public
           cp -r css img js index.html public/
+    
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages  # Gałąź docelowa dla deployu
-          folder: public  # Folder, który ma być zdeployowany
+        id: deployment
+        uses: actions/deploy-pages@v4
