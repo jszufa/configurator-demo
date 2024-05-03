@@ -28,8 +28,13 @@ jobs:
         - name: Prepare public directory
           run: |
             mkdir -p public
-            rsync -av --exclude='css/input.css' ./ css/ public/css/
-            cp -r css img js index.html public/
+            cp -r css/ public/css/
+            cp -r img/ public/img/
+            cp -r js/ public/js/
+            cp index.html public/
+
+        - name: List public directory
+          run: ls -R public/
     
         - name: Setup Pages
           uses: actions/configure-pages@v5
