@@ -28,6 +28,7 @@ jobs:
         - name: Prepare public directory
           run: |
             mkdir -p public
+            rsync -av --exclude='input.css' css/ public/css/
             cp -r css img js index.html public/
     
         - name: Setup Pages
