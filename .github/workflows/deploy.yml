@@ -28,10 +28,6 @@ jobs:
         - name: Prepare public directory
           run: |
             mkdir -p public
-            cp -r css/ public/css/
-            cp -r img/ public/img/
-            cp -r js/ public/js/
-            cp index.html public/
 
         - name: List public directory
           run: ls -R public/
