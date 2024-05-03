@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="visualisation">
-                        <img src="img/pergola.png" alt="Pergola" class="pergola-image rounded-lg w-full">
+                        <img src="img/pergola2.jpeg" alt="Pergola" class="pergola-image rounded-lg w-full">
                     </div>
                 </div>
             </main>
@@ -50,89 +50,74 @@
 
             <aside class="sidebar mt-24 col-span-4">
 
-                <div id="accordion-colors" data-accordion="open">
-                    <h2 id="accordion-arrow-icon-heading-3">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl mb-4"
-                            data-accordion-target="#accordion-colors-body-3" aria-expanded="false"
-                            aria-controls="accordion-colors-body-3">
-                            <span>Kolory</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-colors-body-3" class="hidden"
-                        aria-labelledby="accordion-arrow-icon-heading-3">
-                        <div class="p-5  bg-white rounded-b-xl">  
-                        </div>
-                    </div>
-                </div>
+                <section id="colors">
+                    <div id="accordion-colors" data-accordion="open" class="relative mb-4">
+                        <h2 id="accordion-colors-heading">
+                            <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right border-8 border-white  hover:bg-gray-100 dark:hover:bg-gray-800 gap-3  bg-white rounded-t-xl"
+                                data-accordion-target="#accordion-colors-body" aria-expanded="false"
+                                aria-controls="accordion-colors-body-3">
+                                <span class="text-2xl text-black">Kolory</span>
+                                <i data-accordion-icon class="fa-solid fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </h2>
 
-                <div id="accordion-option2" data-accordion="open">
-                    <h2 id="accordion-arrow-icon-heading-3">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl"
-                            data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
-                            aria-controls="accordion-arrow-icon-body-3">
-                            <span>Kolory</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-arrow-icon-body-3" class="hidden"
-                        aria-labelledby="accordion-arrow-icon-heading-3">
-                        <div class="p-5  bg-white rounded-b-xl">  
+                        <!-- można będzie ukrywać ten element dodając pozycję absolute -->
+                        <div class="accordion-visible-content z-0 w-full bg-white rounded-b-xl"
+                            aria-labelledby="accordion-arrow-icon-heading-3">
+                            <div class="p-5 flex justify-between ps-1 items-center">
+                                <div class="flex gap-2 items-center">
+                                    <div class="relative rounded h-8 w-8 bg-red-700"></div>
+                                    <p class="text-sm">Czerwony</p>
+                                </div>
+                                <p class="text-sm pe-1">0 PLN</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div id="accordion-arrow-icon" data-accordion="open">
-                    <h2 id="accordion-arrow-icon-heading-3">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl"
-                            data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
-                            aria-controls="accordion-arrow-icon-body-3">
-                            <span>Kolory</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-arrow-icon-body-3" class="hidden"
-                        aria-labelledby="accordion-arrow-icon-heading-3">
-                        <div class="p-5  bg-white rounded-b-xl">  
+                        <div id="accordion-colors-body" class="hidden relative z-10 bg-white rounded-b-xl h-24"
+                            aria-labelledby="accordion-arrow-icon-heading-3">
+                            <div class="p-5">
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div id="accordion-arrow-icon" data-accordion="open">
-                    <h2 id="accordion-arrow-icon-heading-3">
-                        <button type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border-8 border-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 bg-white rounded-t-xl"
-                            data-accordion-target="#accordion-arrow-icon-body-3" aria-expanded="false"
-                            aria-controls="accordion-arrow-icon-body-3">
-                            <span>Kolory</span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                            </svg>
-                        </button>
-                    </h2>
-                    <div id="accordion-arrow-icon-body-3" class="hidden"
-                        aria-labelledby="accordion-arrow-icon-heading-3">
-                        <div class="p-5  bg-white rounded-b-xl">  
+                <section id="colors">
+                    <div id="accordion-construction" data-accordion="open" class="relative">
+                        <h2 id="accordion-construction-heading">
+                            <button type="button"
+                                class="flex items-center justify-between w-full p-5 font-medium rtl:text-right border-8 border-white  hover:bg-gray-100 dark:hover:bg-gray-800 gap-3  bg-white rounded-t-xl"
+                                data-accordion-target="#accordion-construction-body" aria-expanded="false"
+                                aria-controls="accordion-colors-body-3">
+                                <span class="text-2xl text-black">Konstrukcja</span>
+                                <i data-accordion-icon class="fa-solid fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </h2>
+
+                        <!-- można będzie ukrywać ten element dodając pozycję absolute -->
+                        <div class="accordion-visible-content z-0 w-full bg-white rounded-b-xl"
+                            aria-labelledby="accordion-arrow-icon-heading-3">
+                            <div class="p-5 flex justify-between ps-1 items-center">
+                                <div class="flex gap-2 items-center">
+                                    <div class="relative rounded h-8 w-8 bg-red-700"></div>
+                                    <p class="text-sm">Czerwony</p>
+                                </div>
+                                <p class="text-sm pe-1">0 PLN</p>
+                            </div>
+                        </div>
+
+                        <div id="accordion-construction-body" class="hidden relative z-10 bg-white rounded-b-xl h-24"
+                            aria-labelledby="accordion-arrow-icon-heading-3">
+                            <div class="p-5">
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
+
+                
+
+
+
 
 
                 <div class="price-info">

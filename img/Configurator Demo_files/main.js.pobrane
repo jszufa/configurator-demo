@@ -1,0 +1,62 @@
+window.addEventListener("load", function () {
+    checkHashAndScroll();
+});
+
+window.addEventListener("hashchange", checkHashAndScroll);
+
+window.addEventListener('scroll', highlightTabOnScroll);
+
+function checkHashAndScroll() {
+    if (window.location.hash) {
+        const element = document.querySelector(window.location.hash);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+            setActiveTab(window.location.hash);
+        }
+    }
+};
+
+function checkHashAndScroll() {
+    if (window.location.hash) {
+        const element = document.querySelector(window.location.hash);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
+            setActiveTab(window.location.hash);
+        }
+    }
+}
+
+function switchTab(evt) {
+    evt.preventDefault();
+    const hashValue = evt.target.getAttribute("href");
+
+    // Usuwamy obecny hash z URL, bez przeładowania strony.
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+
+    // Następnie dodajemy nasz nowy hash, co powinno spowodować przeskoczenie do odpowiedniej sekcji.
+    window.location.hash = hashValue;
+}
+
+function setActiveTab(hash) {
+    var tabs = document.querySelectorAll('.navbar a');
+    tabs.forEach(tab => {
+        if (tab.getAttribute("href") === hash) {
+            tab.classList.add("active");
+        } else {
+            tab.classList.remove("active");
+        }
+    });
+}
+
+function highlightTabOnScroll() {
+    const sections = document.querySelectorAll('section');
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+    sections.forEach((sec) => {
+        if (sec.offsetTop <= scrollPos + 100 && sec.offsetTop + sec.offsetHeight > scrollPos + 100) {
+            // Approximately when the top of the section hits near the middle of the viewport
+            const currentHash = '#' + sec.id;
+            setActiveTab(currentHash);
+        }
+    });
+}
