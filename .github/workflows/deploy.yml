@@ -28,7 +28,8 @@ jobs:
         - name: Prepare public directory
           run: |
             mkdir -p public
-            cp -r css/ public/css/
+            mkdir -p public/css
+            find css -type f ! -name 'input.css' -exec cp {} public/css/ \;
             cp -r img/ public/img/
             cp -r js/ public/js/
             cp index.html public/
